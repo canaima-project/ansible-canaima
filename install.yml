@@ -1,0 +1,9 @@
+---
+- name: Deploy Mesos cluster manager for Canaima
+  hosts: canaima_mesos
+  remote_user: ansible
+  become: true
+  tasks:
+  - import_role:
+      name: mesos
+      tasks_from: install
