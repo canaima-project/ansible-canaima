@@ -2,7 +2,7 @@
 
 Ansible Playbooks for Canaima project.
 
-Please find the complete project's documentation [here](https://github.com/toreatessier/canaima/)
+Please find the complete project's documentation [here](https://github.com/canaima-project)
 
 ## Getting Started
 
@@ -44,4 +44,4 @@ Deploy ssh authorized keys for remote execution.
 
 ## Authors
 
-* **Toréa TESSIER** - <torea.tessier@reseau.eseo.fr> - [Canaima Project](https://github.com/toreatessier/canaima.git)
+* **Toréa TESSIER** - <torea.tessier2@gmail.com> - [Canaima Project](https://github.com/canaima-project/)
