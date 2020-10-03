@@ -1,2 +1,2 @@
-- src: git+gogs@192.168.4.16:Equipe_1_Jakarta/ansible-role-network_configuration.git
+- src: git+ssh://git@github.com:canaima-project/ansible-role-mesos.git
   name: mesos
