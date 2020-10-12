@@ -1,19 +1,19 @@
 ---
-- name: Deploy Mesos cluster manager for Canaima (master nodes)
-  hosts: canaima_mesos_masters
+- name: Deploy k8s master node
+  hosts: kube_master
   remote_user: ansible
   become: true
   tasks:
   - import_role:
-      name: mesos
+      name: kube
       tasks_from: install_master
 
 
-- name: Deploy Mesos cluster manager for Canaima (slave nodes)
-  hosts: canaima_mesos_slaves
+- name: Deploy k8s slave nodes
+  hosts: kube_slaves
   remote_user: ansible
   become: true
   tasks:
   - import_role:
-      name: mesos
-      tasks_from: install_slave
+      name: kube
+      tasks_from: install_slaves
