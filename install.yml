@@ -16,4 +16,4 @@
   tasks:
   - import_role:
       name: mesos
-      tasks_from: install_slaves
+      tasks_from: install_slave
