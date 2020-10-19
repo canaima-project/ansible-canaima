@@ -1,2 +1,3 @@
-- src: git+git@github.com:canaima-projectansible-role-mesos.git
-  name: kube
+- src: git+git@github.com:canaima-project/ansible-role-mesos.git
+  name: mesos
+  version: dev

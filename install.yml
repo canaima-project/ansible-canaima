@@ -1,19 +1,19 @@
 ---
-- name: Deploy k8s master node
-  hosts: kube_master
+- name: Deploy mesos master nodes
+  hosts: canaima_mesos_masters
   remote_user: ansible
   become: true
   tasks:
   - import_role:
-      name: kube
+      name: mesos
       tasks_from: install_master
 
 
-- name: Deploy k8s slave nodes
-  hosts: kube_slaves
+- name: Deploy mesos slave nodes
+  hosts: canaima_mesos_slaves
   remote_user: ansible
   become: true
   tasks:
   - import_role:
-      name: kube
+      name: mesos
       tasks_from: install_slaves
