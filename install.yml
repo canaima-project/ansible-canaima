@@ -1,19 +1,27 @@
 ---
-- name: Deploy mesos master nodes
-  hosts: canaima_mesos_masters
-  remote_user: ansible
-  become: true
-  tasks:
-  - import_role:
-      name: mesos
-      tasks_from: install_master
+# - name: Deploy mesos master nodes
+#   hosts: canaima_mesos_masters
+#   remote_user: ansible
+#   become: true
+#   tasks:
+#   - import_role:
+#       name: mesos
+#       tasks_from: install_master
 
 
-- name: Deploy mesos slave nodes
-  hosts: canaima_mesos_slaves
-  remote_user: ansible
-  become: true
+# - name: Deploy mesos slave nodes
+#   hosts: canaima_mesos_slaves
+#   remote_user: ansible
+#   become: true
+#   tasks:
+#   - import_role:
+#       name: mesos
+#       tasks_from: install_slave
+
+- name: Test vm creation
+  hosts: vm_creation
+  remote_user: etudiant
   tasks:
-  - import_role:
-      name: mesos
-      tasks_from: install_slave
+  - include_role:
+      name: vm_creation
+      tasks_from: install_centos

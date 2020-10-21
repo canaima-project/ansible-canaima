@@ -1,3 +1,6 @@
 - src: git+git@github.com:canaima-project/ansible-role-mesos.git
   name: mesos
   version: dev
+
+- src: git+git@github.com:canaima-project/ansible-role-vm_creation.git
+  name: vm_creation
