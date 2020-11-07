@@ -4,3 +4,11 @@
 
 - src: git+git@github.com:canaima-project/ansible-role-vm_creation.git
   name: vm_creation
+
+- src: git+git@github.com:canaima-project/ansible-role-nfs-server.git
+  name: nfs_server
+  version: dev
+
+- src: git+git@github.com:canaima-project/ansible-role-hadoop.git
+  name: hadoop
+  version: test

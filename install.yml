@@ -1,4 +1,13 @@
 ---
+# - name: Deploy mcanaima NFS server
+#   hosts: nfs
+#   remote_user: ansible
+#   become: true
+#   tasks:
+#   - import_role:
+#       name: nfs_server
+#       tasks_from: install
+
 # - name: Deploy mesos master nodes
 #   hosts: canaima_mesos_masters
 #   remote_user: ansible
@@ -8,20 +17,52 @@
 #       name: mesos
 #       tasks_from: install_master
 
-
-# - name: Deploy mesos slave nodes
-#   hosts: canaima_mesos_slaves
-#   remote_user: ansible
-#   become: true
+# - name: Create mesos-slave1
+#   hosts: canaima_pc1
+#   remote_user: etudiant
 #   tasks:
-#   - import_role:
-#       name: mesos
-#       tasks_from: install_slave
+#   - include_role:
+#       name: vm_creation
+#       tasks_from: install_centos
+#   vars:
+#     vm_ip: 192.168.4.172
+#     vm_name: canaima-mesos-slave1
+#     vm_memory: 8192
+#     vm_cpus: 2
 
-- name: Test vm creation
-  hosts: vm_creation
+- name: Create mesos-slave2
+  hosts: canaima_pc2
   remote_user: etudiant
   tasks:
   - include_role:
       name: vm_creation
       tasks_from: install_centos
+  vars:
+    vm_ip: 192.168.4.173
+    vm_name: canaima-mesos-slave2
+    vm_memory: 8192
+    vm_cpus: 2
+  
+- name: Create mesos-slave3
+  hosts: canaima_pc3
+  remote_user: etudiant
+  tasks:
+  - include_role:
+      name: vm_creation
+      tasks_from: install_centos
+  vars:
+    vm_ip: 192.168.4.174
+    vm_name: canaima-mesos-slave3
+    vm_memory: 8192
+    vm_cpus: 2
+
+- name: Deploy mesos slave nodes
+  hosts: canaima_mesos_slaves
+  remote_user: ansible
+  become: true
+  tasks:
+  - import_role:
+      name: mesos
+      tasks_from: install_slave
+
+  
