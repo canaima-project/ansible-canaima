@@ -1,36 +1,37 @@
 ---
-# - name: Deploy mcanaima NFS server
-#   hosts: nfs
-#   remote_user: ansible
-#   become: true
-#   tasks:
-#   - import_role:
-#       name: nfs_server
-#       tasks_from: install
+- name: Deploy Canaima NFS server
+  hosts: nfs
+  remote_user: ansible
+  become: true
+  tasks:
+  - import_role:
+      name: nfs_server
+      tasks_from: install
 
-# - name: Deploy mesos master nodes
-#   hosts: canaima_mesos_masters
-#   remote_user: ansible
-#   become: true
-#   tasks:
-#   - import_role:
-#       name: mesos
-#       tasks_from: install_master
+- name: Deploy Mesos master nodes
+  hosts: canaima_mesos_masters
+  remote_user: ansible
+  become: true
+  tasks:
+  - import_role:
+      name: mesos
+      tasks_from: install_master
 
-# - name: Create mesos-slave1
-#   hosts: canaima_pc1
-#   remote_user: etudiant
-#   tasks:
-#   - include_role:
-#       name: vm_creation
-#       tasks_from: install_centos
-#   vars:
-#     vm_ip: 192.168.4.172
-#     vm_name: canaima-mesos-slave1
-#     vm_memory: 8192
-#     vm_cpus: 2
+- name: Create mesos-slave1 (hadoop node)
+  hosts: canaima_pc1
+  remote_user: etudiant
+  tasks:
+  - include_role:
+      name: vm_creation
+      tasks_from: install_centos
+  vars:
+    vm_ip: 192.168.4.172
+    vm_name: canaima-mesos-slave1
+    vm_memory: 8192
+    vm_cpus: 2
+    is_hadoop: true
 
-- name: Create mesos-slave2
+- name: Create mesos-slave2 (hadoop node)
   hosts: canaima_pc2
   remote_user: etudiant
   tasks:
@@ -42,8 +43,9 @@
     vm_name: canaima-mesos-slave2
     vm_memory: 8192
     vm_cpus: 2
+    is_hadoop: yes
   
-- name: Create mesos-slave3
+- name: Create mesos-slave3 (hadoop node)
   hosts: canaima_pc3
   remote_user: etudiant
   tasks:
@@ -55,8 +57,9 @@
     vm_name: canaima-mesos-slave3
     vm_memory: 8192
     vm_cpus: 2
+    is_hadoop: yes
 
-- name: Deploy mesos slave nodes
+- name: Deploy mesos-slave on slave nodes (agents)
   hosts: canaima_mesos_slaves
   remote_user: ansible
   become: true
