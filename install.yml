@@ -16,6 +16,12 @@
   - import_role:
       name: mesos
       tasks_from: install_master
+      
+- name: Send Ansible controller node ssh key to hadoop user
+  hosts: localhost
+  tasks:
+  - name : Send Ansible controller node ssh key to hadoop user
+    shell: sshpass -p hadoop ssh-copy-id -i /home/torea/.ssh/id_rsa.pub -o StrictHostKeyChecking=no hadoop@"{{ template_ip }}"
 
 - name: Create mesos-slave1 (hadoop node)
   hosts: canaima_pc1
