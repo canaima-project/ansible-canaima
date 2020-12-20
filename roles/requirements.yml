@@ -13,6 +13,6 @@
   name: hadoop
   version: test
 
-- src: git+git@github.com:canaima-project/ansible-role-sparkgit
+- src: git+git@github.com:canaima-project/ansible-role-spark.git
   name: spark
-  version: dev
+  version: dev 
