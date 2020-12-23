@@ -10,11 +10,11 @@ Please find the complete project's documentation [here](https://github.com/canai
 
 This repo is made to be the **only one** to be cloned to deploy Canaima project's services.
 It automatically clones Canaima's different ansible roles :
-- *[VM_creation]*(https://github.com/canaima-project/ansible-role-vm_creation) : automated CentOS / Debian VM creation **and** configuration
-- *[Mesos]*(https://github.com/canaima-project/ansible-role-mesos) : Mesos orchestration service deployment
-- *[Hadoop]*(https://github.com/canaima-project/ansible-role-hadoop) : Hadoop service deployment
-- *[Spark]*(https://github.com/canaima-project/ansible-role-spark) : Spark service deployment
-- *[ELS]*(https://github.com/canaima-project/ansible-role-els) : ElasticSearch service deployment
+- [VM_creation](https://github.com/canaima-project/ansible-role-vm_creation) : automated CentOS / Debian VM creation **and** configuration
+- *[Mesos](https://github.com/canaima-project/ansible-role-mesos)* : Mesos orchestration service deployment
+- *[Hadoop](https://github.com/canaima-project/ansible-role-hadoop)* : Hadoop service deployment
+- *[Spark](https://github.com/canaima-project/ansible-role-spark)* : Spark service deployment
+- *[ELS](https://github.com/canaima-project/ansible-role-els)* : ElasticSearch service deployment
 
 #### install.yml
 
