@@ -10,7 +10,7 @@ Please find the complete project's documentation [here](https://github.com/canai
 
 This repo is made to be the **only one** to be cloned to deploy Canaima project's services.
 It automatically clones Canaima's different ansible roles :
-- [VM_creation](https://github.com/canaima-project/ansible-role-vm_creation) : automated CentOS / Debian VM creation **and** configuration
+- *[VM_creation](https://github.com/canaima-project/ansible-role-vm_creation)* : automated CentOS / Debian VM creation **and** configuration
 - *[Mesos](https://github.com/canaima-project/ansible-role-mesos)* : Mesos orchestration service deployment
 - *[Hadoop](https://github.com/canaima-project/ansible-role-hadoop)* : Hadoop service deployment
 - *[Spark](https://github.com/canaima-project/ansible-role-spark)* : Spark service deployment
@@ -19,12 +19,12 @@ It automatically clones Canaima's different ansible roles :
 #### install.yml
 
 This playbook will deploy Canaima in the production environnement which is composed by the following compute ressources (Cauchy) :
-- canaima_pc1 192.168.4.7
-- canaima_pc2 192.168.4.152 
-- canaima_pc3 192.168.4.92 
-- canaima_pc4 192.168.4.86
-- canaima_pc5 192.168.4.137
-- canaima_pc6 192.168.4.214
+- *canaima_pc1* 192.168.4.7
+- *canaima_pc2* 192.168.4.152 
+- *canaima_pc3* 192.168.4.92 
+- *canaima_pc4* 192.168.4.86
+- *canaima_pc5* 192.168.4.137
+- *canaima_pc6* 192.168.4.214
 
 It is made to deploy :
 
