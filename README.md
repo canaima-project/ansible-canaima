@@ -12,9 +12,9 @@ This repo is made to be the **only one** to be cloned to deploy Canaima project'
 It automatically clones Canaima's different ansible roles :
 - *[VM_creation]*(https://github.com/canaima-project/ansible-role-vm_creation) : automated CentOS / Debian VM creation **and** configuration
 - *[Mesos]*(https://github.com/canaima-project/ansible-role-mesos) : Mesos orchestration service deployment
-- *[Hadoop]*(https://github.com/canaima-project/ansible-role-mesos) : Hadoop service deployment
-- *[Spark]*(https://github.com/canaima-project/ansible-role-mesos) : Spark service deployment
-- *[ELS]*(https://github.com/canaima-project/ansible-role-mesos) : ElasticSearch service deployment
+- *[Hadoop]*(https://github.com/canaima-project/ansible-role-hadoop) : Hadoop service deployment
+- *[Spark]*(https://github.com/canaima-project/ansible-role-spark) : Spark service deployment
+- *[ELS]*(https://github.com/canaima-project/ansible-role-els) : ElasticSearch service deployment
 
 #### install.yml
 
@@ -29,7 +29,7 @@ This playbook will deploy Canaima in the production environnement which is compo
 It is made to deploy :
 
 - **Mesos masters** (3 nodes + zookeeper - no need to boostrap the cluster)
-- **Hadoop cluster** (3 nodes, deploys HDFS + applicative layer)
+- **Hadoop cluster** (3 nodes, it deploys HDFS + applicative layer)
 - **Spark cluster** (3 nodes)
 - **ElasticSearch**
 
@@ -38,7 +38,7 @@ It is made to deploy :
 #### Network
 - Cisco Catalyst 2960 (switch) with minimal install and SSH enabled
 - Cisco 2911 (router) with minimal install and SSH enabled
-- OK for Cauchy room
+- Production-ready for Cauchy room
 
 ## Installing Canaima
 ### SSH
