@@ -44,7 +44,7 @@ It is made to deploy :
 ### SSH
 ```
 apt-get install ansible git -y
-git clone git@github.com:toreatessier/canaima.git
+git clone git@github.com:canaima-project/ansible-canaima.git
 cd ansible/ansible-canaima
 ansible-galaxy install -r roles/requirements.yml -p roles
 ansible-playbook install.yml
@@ -53,7 +53,7 @@ ansible-playbook install.yml
 ### HTTPS
 ```
 apt-get install ansible git -y
-git clone https://github.com/toreatessier/canaima.git
+git clone https://github.com/canaima-project/ansible-canaima.git
 cd ansible/ansible-canaima
 ansible-galaxy install -r roles/requirements.yml -p roles
 ansible-playbook install.yml
